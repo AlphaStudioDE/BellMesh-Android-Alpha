@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>BellMesh Privacy Policy / Polityka prywatności</title>
+  <style>
+    :root{color-scheme:dark;--bg:#030b18;--card:#09182b;--line:#173958;--text:#eef7ff;--muted:#a7bdd1;--cyan:#21d4fd}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0,#092b58 0,transparent 34rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{max-width:900px;margin:auto;padding:42px 20px 80px}header,.panel{background:linear-gradient(145deg,rgba(15,39,65,.94),rgba(5,18,34,.94));border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 18px 60px rgba(0,0,0,.28)}
+    header{margin-bottom:20px}h1{margin:0 0 8px;font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.04em}h2{margin-top:0;color:var(--cyan)}h3{margin-top:1.8rem}p,li{color:var(--muted)}strong{color:var(--text)}a{color:var(--cyan)}nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}nav a{padding:8px 14px;border:1px solid #22618a;border-radius:999px;text-decoration:none}.panel{margin-top:20px}.tag{color:var(--cyan);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="tag">BellMesh · Public Alpha</div>
+  <h1>Privacy Policy</h1>
+  <p><strong>Polityka prywatności / Privacy Policy</strong><br>Effective date / Data wejścia w życie: 27 July 2026</p>
+  <nav><a href="#pl">Polski</a><a href="#en">English</a></nav>
+</header>
+
+<section class="panel" id="pl" lang="pl">
+<h2>Polityka prywatności BellMesh</h2>
+<p>BellMesh jest rozwijany i publikowany przez <strong>Damiana Borkowskiego pod nazwą AlphaStudioDE</strong>. Kontakt w sprawach prywatności i bezpieczeństwa: <a href="mailto:bell.mesh.security@gmail.com">bell.mesh.security@gmail.com</a>.</p>
+
+<h3>1. Najważniejsza zasada</h3>
+<p>BellMesh nie prowadzi centralnego archiwum rozmów. Treść wiadomości, obrazów, plików i nagrań głosowych jest szyfrowana end-to-end i przeznaczona wyłącznie dla wybranego odbiorcy. AlphaStudioDE ani operator infrastruktury pośredniczącej nie otrzymują kluczy potrzebnych do odszyfrowania tej treści.</p>
+
+<h3>2. Dane przechowywane na urządzeniu</h3>
+<ul>
+<li>wybrana nazwa profilu, zdjęcie profilu, lista sparowanych kontaktów i ich zdjęcia;</li>
+<li>historia rozmów, załączniki, potwierdzenia dostarczenia/odczytu oraz ustawienia aplikacji;</li>
+<li>lokalny identyfikator instalacji, klucze kryptograficzne i stan bezpiecznych sesji.</li>
+</ul>
+<p>Dane te pozostają na urządzeniu i są chronione mechanizmami szyfrowania oraz Android Keystore. Kopia zapasowa danych aplikacji w systemie Android jest wyłączona. Nazwa i opcjonalne zdjęcie profilu są przekazywane wyłącznie osobie, z którą użytkownik świadomie się paruje.</p>
+
+<h3>3. Dane przesyłane przez sieć</h3>
+<p>BellMesh najpierw próbuje komunikacji bezpośredniej peer-to-peer. Podczas zestawiania połączenia i gdy połączenie bezpośrednie nie jest możliwe, aplikacja może korzystać z tymczasowej infrastruktury Cloudflare:</p>
+<ul>
+<li>zaszyfrowane kapsuły parowania są przechowywane maksymalnie około 5 minut;</li>
+<li>przekaźnik WebSocket przekazuje zaszyfrowane ramki między aktualnie połączonymi urządzeniami i nie stanowi skrzynki wiadomości ani archiwum rozmów;</li>
+<li>Cloudflare może technicznie widzieć adres IP, czas i długość połączenia, rozmiar zaszyfrowanych danych oraz losowy identyfikator kanału; nie widzi treści rozmów ani nazw kontaktów;</li>
+<li>na potrzeby ograniczania nadużyć serwer tworzy jednokierunkowy kod HMAC adresu IP na krótki przedział czasu; surowy adres IP nie jest zapisywany przez BellMesh w bazie ograniczeń;</li>
+<li>aplikacja pobiera podpisaną politykę dostępu i informacje o aktualizacjach, co ujawnia dostawcy standardowe metadane połączenia sieciowego.</li>
+</ul>
+<p>Obrazy, pliki i nagrania głosowe są pobierane od drugiego urządzenia na żądanie użytkownika. Infrastruktura BellMesh nie przechowuje ich jako centralnego archiwum.</p>
+
+<h3>4. Uprawnienia urządzenia</h3>
+<ul>
+<li><strong>Aparat:</strong> skanowanie kodów QR oraz, po świadomym wyborze użytkownika, wykonanie zdjęcia profilu lub zdjęcia do wysłania.</li>
+<li><strong>Mikrofon:</strong> nagrywanie wiadomości głosowych wyłącznie po rozpoczęciu nagrywania przez użytkownika.</li>
+<li><strong>Pliki i multimedia:</strong> wybór albo zapis treści wskazanej przez użytkownika poprzez systemowy selektor Androida.</li>
+<li><strong>Powiadomienia i usługa pierwszoplanowa:</strong> informowanie o wiadomościach i utrzymywanie działania komunikacji.</li>
+<li><strong>Sieć:</strong> parowanie, komunikacja P2P, zaszyfrowany fallback oraz sprawdzanie polityki dostępu i aktualizacji.</li>
+</ul>
+
+<h3>5. Analityka, reklamy i sprzedaż danych</h3>
+<p>BellMesh 0.50.0-alpha nie zawiera reklam, narzędzi analitycznych ani zewnętrznego systemu raportowania awarii. AlphaStudioDE nie sprzedaje danych użytkowników.</p>
+
+<h3>6. Udostępnianie danych</h3>
+<p>Dane wybrane do wysłania są udostępniane wskazanemu kontaktowi. Cloudflare przetwarza opisane wyżej metadane sieciowe i zaszyfrowane dane jako dostawca infrastruktury. GitHub lub Google Play mogą przetwarzać dane związane z pobieraniem i aktualizacją aplikacji zgodnie z własnymi politykami prywatności. Operator sieci użytkownika również może widzieć standardowe metadane połączenia, lecz nie treść zaszyfrowanych rozmów.</p>
+
+<h3>7. Retencja i usuwanie</h3>
+<p>Lokalne dane pozostają na urządzeniu do czasu usunięcia kontaktu/rozmowy, wyczyszczenia danych aplikacji albo jej odinstalowania. Tymczasowe kapsuły parowania wygasają po około 5 minutach, a krótkotrwałe rekordy ograniczania nadużyć są automatycznie czyszczone. BellMesh nie tworzy kont użytkowników na serwerze, dlatego nie istnieje centralne konto ani centralne archiwum wiadomości do usunięcia. Pytania lub żądania dotyczące danych infrastruktury można kierować na podany adres kontaktowy.</p>
+
+<h3>8. Bezpieczeństwo i wersja alpha</h3>
+<p>BellMesh wykorzystuje nowoczesne mechanizmy kryptograficzne, lecz wersja alpha jest oprogramowaniem testowym i nie przeszła niezależnego audytu bezpieczeństwa. Nie należy jej używać do komunikacji wysokiego ryzyka, sytuacji awaryjnych ani ochrony informacji, których ujawnienie mogłoby spowodować poważną szkodę.</p>
+
+<h3>9. Dzieci</h3>
+<p>BellMesh nie jest kierowany specjalnie do dzieci. Użytkownicy powinni korzystać z aplikacji zgodnie z prawem obowiązującym w ich kraju.</p>
+
+<h3>10. Zmiany polityki</h3>
+<p>Polityka będzie aktualizowana, gdy zmienią się funkcje lub praktyki przetwarzania danych. Data wejścia w życie jest podana na górze strony.</p>
+</section>
+
+<section class="panel" id="en" lang="en">
+<h2>BellMesh Privacy Policy</h2>
+<p>BellMesh is developed and published by <strong>Damian Borkowski under the name AlphaStudioDE</strong>. Privacy and security contact: <a href="mailto:bell.mesh.security@gmail.com">bell.mesh.security@gmail.com</a>.</p>
+
+<h3>1. Core principle</h3>
+<p>BellMesh does not operate a central conversation archive. Messages, images, files and voice recordings are end-to-end encrypted for the intended recipient. AlphaStudioDE and the relay infrastructure operator do not receive the keys required to decrypt this content.</p>
+
+<h3>2. Data stored on the device</h3>
+<ul>
+<li>the chosen profile name and photo, paired contacts and their photos;</li>
+<li>conversation history, attachments, delivery/read receipts and app settings;</li>
+<li>a local installation identifier, cryptographic keys and secure-session state.</li>
+</ul>
+<p>This data remains on the device and is protected with encryption and Android Keystore. Android backup of app data is disabled. A profile name and optional photo are shared only with a person the user intentionally pairs with.</p>
+
+<h3>3. Data transmitted over the network</h3>
+<p>BellMesh first attempts direct peer-to-peer communication. During pairing, or when a direct connection is unavailable, the app may use temporary Cloudflare infrastructure:</p>
+<ul>
+<li>encrypted pairing capsules are retained for no more than approximately 5 minutes;</li>
+<li>the WebSocket relay forwards encrypted frames between currently connected devices and is not an offline mailbox or conversation archive;</li>
+<li>Cloudflare may technically observe IP addresses, connection timing and duration, encrypted payload sizes and a random channel identifier; it cannot read conversation content or contact names;</li>
+<li>for abuse prevention, the service creates a one-way HMAC value from the IP address for a short rate-limit window; BellMesh does not store the raw IP address in its rate-limit database;</li>
+<li>the app retrieves signed access policy and update information, exposing ordinary network metadata to the provider.</li>
+</ul>
+<p>Images, files and voice recordings are downloaded from the other device at the user's request. BellMesh infrastructure does not keep them as a central archive.</p>
+
+<h3>4. Device permissions</h3>
+<ul>
+<li><strong>Camera:</strong> QR scanning and, after an explicit user action, taking a profile photo or a photo to send.</li>
+<li><strong>Microphone:</strong> recording a voice message only after the user starts recording.</li>
+<li><strong>Files and media:</strong> selecting or saving user-chosen content through Android's system picker.</li>
+<li><strong>Notifications and foreground service:</strong> message notifications and maintaining communications.</li>
+<li><strong>Network:</strong> pairing, P2P communication, encrypted fallback, access-policy checks and updates.</li>
+</ul>
+
+<h3>5. Analytics, ads and sale of data</h3>
+<p>BellMesh 0.50.0-alpha contains no advertising, analytics SDK or third-party crash-reporting service. AlphaStudioDE does not sell user data.</p>
+
+<h3>6. Sharing</h3>
+<p>User-selected data is shared with the chosen contact. Cloudflare processes the network metadata and encrypted data described above as an infrastructure provider. GitHub or Google Play may process download and update data under their own privacy policies. The user's network operator can also observe ordinary connection metadata, but not encrypted conversation content.</p>
+
+<h3>7. Retention and deletion</h3>
+<p>Local data remains until the user removes the contact/conversation, clears app data or uninstalls BellMesh. Temporary pairing capsules expire after approximately 5 minutes, and short-lived abuse-prevention records are automatically removed. BellMesh does not create server accounts, so there is no central user account or central message archive to delete. Questions or requests concerning infrastructure data may be sent to the contact address above.</p>
+
+<h3>8. Security and alpha status</h3>
+<p>BellMesh uses modern cryptographic mechanisms, but the alpha is test software and has not undergone an independent security audit. It must not be used for high-risk communications, emergencies or information whose disclosure could cause serious harm.</p>
+
+<h3>9. Children</h3>
+<p>BellMesh is not specifically directed to children. Users should use it in accordance with the laws applicable in their country.</p>
+
+<h3>10. Changes</h3>
+<p>This policy will be updated when features or data practices change. The effective date appears at the top of this page.</p>
+</section>
+</main>
+</body>
+</html>
